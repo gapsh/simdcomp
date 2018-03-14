@@ -5404,7 +5404,7 @@ static void avxpackblockmask32(const uint32_t * pin, __m256i * compressed) {
 
 static void avxunpackblock0(const __m256i * compressed, uint32_t * pout) {
   (void) compressed;
-  memset(pout,0,256);
+  memset(pout,0,256 * sizeof(uint32_t));
 }
 
 

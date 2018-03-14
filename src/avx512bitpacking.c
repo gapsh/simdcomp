@@ -5410,7 +5410,7 @@ static void avx512packblockmask32(const uint32_t * pin, __m512i * compressed) {
 
 static void avx512unpackblock0(const __m512i * compressed, uint32_t * pout) {
   (void) compressed;
-  memset(pout,0,512);
+  memset(pout,0,512 * sizeof(uint32_t));
 }
 
 
